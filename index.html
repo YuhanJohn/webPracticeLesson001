@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Html Dom Lesson</title>
+    <link href="./asset/css/reset.css" rel="stylesheet" type="text/css" />
+    <style>
+        .container{
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+        }
+        .title{
+            font-size: 3rem;
+        }
+        .answer-block{
+            font-size: 2rem;
+        }
+        .btn{
+            width: 200px;
+            padding: 16px 32px;
+            font-size: 1.5rem;
+            background: #14a599;
+            color: #ffffff;
+            margin-top: 8px;
+            text-align: center;
+            cursor: pointer;
+        }
+        /*
+            RWD
+            螢幕小於768px時 .btn 的background換顏色
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">The answer is</h1>
+        <div class="answer-block">0</div>
+        <div class="button-add-one btn">
+            <p>click to add one</p>
+        </div>
+        <div class="button-minus-one btn">
+            <p>click to minus one</p>
+        </div>
+    </div>
+
+    <script>
+        // var answer document.querySelector....
+        // addEventListener('click',function(){})
+        // innerText 
+        // Number()
+    </script>
+</body>
+</html>
