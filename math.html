@@ -6,16 +6,28 @@
     <title>Math Lesson</title>
 </head>
 <body>
-
     <script>
-        var numberList = [1,2,3,4,5,6];
+        var numberList = [ 1 , 2 , 3 , 4 , 5 , 6 ];
+        var numberList1 = numberList.map((n) => n+1); 
+        var filter = numberList1.filter(function(value) {
+            return value <= 4;
+        });
+        console.log(filter);
+        var sum = filter.reduce( function(total, filter){
+            return total + filter;
+        });
+        console.log(sum);
 
         // map add 1
-        console.log();
+        //console.log();
         // filter under 4
         // reduce sum up
 
-        var nameList = ['tom','wanda','franky','mike','lucy','tim']
+        var nameList = ['tom','wanda','franky','mike','lucy','tim'];      
+        var nameList1 = nameList.map(x => x.charAt(0).toUpperCase() + x.slice(1));
+
+        const result = nameList1.filter(word => word.length > 4);
+        console.log(result);
 
         // map 大寫
         // filter 名字大於四個字母 length
