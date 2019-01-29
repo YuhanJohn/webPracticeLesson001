@@ -27,6 +27,11 @@
             text-align: center;
             cursor: pointer;
         }
+        @media only screen and (max-width: 768px){
+            .btn{
+                background-color: yellow;
+            }
+        }
         /*
             RWD
             螢幕小於768px時 .btn 的background換顏色
@@ -50,6 +55,28 @@
         // addEventListener('click',function(){})
         // innerText 
         // Number()
+
+        var addBtn = document.querySelector('body > div > div.button-add-one.btn')
+        var minusBtn = document.querySelector('body > div > div.button-minus-one.btn')
+
+        addBtn.addEventListener('click', function(){
+            var answer = document.querySelector('body > div > div.answer-block')
+            var answerNum = [Number(answer.innerText)];
+            var numAdd = answerNum.map((val)=>{ 
+                return val + 1;
+                })
+            answer.innerText = numAdd;
+        })
+
+        minusBtn.addEventListener('click', function(){
+            var answer = document.querySelector('body > div > div.answer-block')
+            var answerNum = [Number(answer.innerText)];
+            var numMinus = answerNum.map((val)=>{ 
+                return val - 1;
+                })
+            answer.innerText = numMinus;
+        })
+
     </script>
 </body>
 </html>

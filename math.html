@@ -9,16 +9,36 @@
 
     <script>
         var numberList = [1,2,3,4,5,6];
-
+        var mapNum = numberList.map((val) => {
+            return val + 1;
+        })
         // map add 1
-        console.log();
+        console.log(mapNum);
         // filter under 4
+        var filNumUpper = numberList.filter((val) => {
+            return val > 4;
+        })
+        console.log(filNumUpper);
+        var filNumUnder = numberList.filter((val) => {
+            return val < 4;
+        })
+        console.log(filNumUnder);
         // reduce sum up
-
+        var redNum = numberList.reduce((total, val) => {
+            return total + val;
+            },0)
+        console.log(redNum);
         var nameList = ['tom','wanda','franky','mike','lucy','tim']
-
+        var upperName = nameList.map((val) => {
+            return val.charAt(0).toUpperCase() + val.slice(1)
+        })
+        console.log(upperName.toString())
         // map 大寫
         // filter 名字大於四個字母 length
+        var filName = nameList.filter((val) => {
+            return val.length > 4;
+        })
+        console.log(filName.toString());
     </script>
 </body>
 </html>
