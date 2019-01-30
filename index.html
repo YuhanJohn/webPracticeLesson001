@@ -27,6 +27,25 @@
             text-align: center;
             cursor: pointer;
         }
+        
+        @media only screen and (min-width: 769px){
+        .btn{
+            background: #14a599
+            }
+        }
+        @media only screen and (min-width: 321px) and (max-width: 768px) {
+        /* For tablets: */
+        .btn{   
+            background: #E77C91
+        }
+        }
+
+        @media only screen and (min-width: 0px) and (max-width: 320px) {
+            .btn{
+            background: #F9B492
+            
+        }
+        }
         /*
             RWD
             螢幕小於768px時 .btn 的background換顏色
@@ -46,10 +65,14 @@
     </div>
 
     <script>
-        // var answer document.querySelector....
-        // addEventListener('click',function(){})
-        // innerText 
-        // Number()
+        var answer = document.querySelector("body > div > div.answer-block")
+        var btn = document.querySelector("body > div > div.button-add-one.btn")
+        btn.addEventListener('click', function(){answer.innerText = Number(answer.innerText)+1})
+
+        var answer = document.querySelector("body > div > div.answer-block")
+        var btn = document.querySelector("body > div > div.button-minus-one.btn")
+        btn.addEventListener('click', function(){answer.innerText = Number(answer.innerText)-1})
+
     </script>
 </body>
 </html>
